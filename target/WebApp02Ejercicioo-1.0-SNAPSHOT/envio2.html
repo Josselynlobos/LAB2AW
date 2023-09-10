@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="webjars/bootstrap/5.1.0/css/bootstrap.min.css" type="text/css" />
+    <script>
+        function mostrarSegundoNumero() {
+            var opcionCheckbox = document.querySelector('input[name="opcion"][value="calcular potencia"]');
+            var segundoNumeroLabel = document.querySelector('#segundoNumeroLabel');
+            var segundoNumeroInput = document.querySelector('#segundoNumeroInput');
+
+            if (opcionCheckbox.checked) {
+                segundoNumeroLabel.style.display = 'block';
+                segundoNumeroInput.style.display = 'block';
+            } else {
+                segundoNumeroLabel.style.display = 'none';
+                segundoNumeroInput.style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="OperacionesDiversas.jsp" method="post">
+            <div class="mb-3">
+                <label for="xusu">Ingrese el número:</label>
+                <input type="number" name="xusu" class="form-control" id="xusu" required><br>
+            </div>
+            <div class="mb-3">
+                <label>Selecciona una opción:</label><br>
+                <input type="checkbox" name="opcion" value="raiz cuadrada">Raiz cuadrada<br>
+                <input type="checkbox" name="opcion" value="raiz cubica">Raiz cubica<br>
+                <input type="checkbox" name="opcion" value="calcular potencia" onchange="mostrarSegundoNumero()">Calcular potencia<br>
+                <input type="checkbox" name="opcion" value="calcular factorial">Calcular Factorial<br>
+            </div>
+            <div class="mb-3" style="display: none;" id="segundoNumeroLabel">
+                <label for="xpas">Ingrese el segundo número:</label>
+                <input type="number" name="xpas" class="form-control" id="xpas">
+            </div>
+            <button type="submit" class="btn btn-primary" value="Calcular">Calcular</button>
+        </form>
+    </div>
+</body>
+</html>

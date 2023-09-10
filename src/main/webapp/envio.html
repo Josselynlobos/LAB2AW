@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operaciones basicas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+              href="webjars/bootstrap/5.1.0/css/bootstrap.min.css" type="text/css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <form action="OperacionesBasicas.jsp" method="post">
+            <div class="mb-3">
+                <label for="xusu">Ingrese el primer número:</label>
+                <input type="number" name="xusu" class="form-control" id="xusu" required><br>
+            </div>
+            <div class="mb-3">
+                <label for="xpas">Ingrese el segundo número:</label>
+                <input type="number" name="xpas" class="form-control" id="xpas" required><br>
+            </div>
+            <div class="mb-3">
+                <label>Selecciona una opción:</label><br>
+                <input type="checkbox" name="opcion" value="sumar">Sumar<br>
+                <input type="checkbox" name="opcion" value="restar">Restar<br>
+                <input type="checkbox" name="opcion" value="multiplicar">Multiplicar<br>
+                <input type="checkbox" name="opcion" value="dividir">Dividir<br>
+            </div>
+            <button type="submit" class="btn btn-primary" value="Calcular">Calcular</button>
+        </form>
+    </div>
+</body>
+</html>
